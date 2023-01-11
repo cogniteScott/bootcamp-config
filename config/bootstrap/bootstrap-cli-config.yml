@@ -75,21 +75,21 @@ bootstrap:
 
         - cdf-project: cdf-bootcamp-27-prod # i.e. bootcamp-01-test
           mappings:
-            - cdf-group: cdf:root
-              idp-source-id: 6585a441-3f8a-403a-9356-df8da9003987
-              idp-source-name: bootcamp-27-prod-admin
-            - cdf-group: cdf:all:owner
-              idp-source-id: 62990130-6914-4c57-8f47-58a16540d299 # for the AAD Group to be matched to cdf-group
-              idp-source-name: bootcamp-27-prod-all-owner # i.e. bootcamp-01-test-all-owner
-            - cdf-group: cdf:all:read
-              idp-source-id: c29c0e2a-30ce-413c-b123-0b5cebb626c1 # for the AAD Group to be matched to cdf-group
-              idp-source-name: bootcamp-27-prod-all-read # i.e. bootcamp-01-test-all-read
-            - cdf-group: cdf:uc:001:oee:owner
-              idp-source-id: 9eac6b53-730a-4a7f-a23e-40b84112c5cd
-              idp-source-name: bootcamp-27-prod-uc-001-oee-owner
-            - cdf-group: cdf:uc:001:oee:read
-              idp-source-id: 45e3e378-f6a3-49bb-8925-207a409b0de4
-              idp-source-name: bootcamp-27-prod-uc-001-oee-read
+              - cdf-group: cdf:root
+                idp-source-id: 6585a441-3f8a-403a-9356-df8da9003987
+                idp-source-name: bootcamp-27-prod-admin
+              - cdf-group: cdf:all:owner
+                idp-source-id: 62990130-6914-4c57-8f47-58a16540d299 # for the AAD Group to be matched to cdf-group
+                idp-source-name: bootcamp-27-prod-all-owner # i.e. bootcamp-01-test-all-owner
+              - cdf-group: cdf:all:read
+                idp-source-id: c29c0e2a-30ce-413c-b123-0b5cebb626c1 # for the AAD Group to be matched to cdf-group
+                idp-source-name: bootcamp-27-prod-all-read # i.e. bootcamp-01-test-all-read
+              - cdf-group: cdf:uc:001:oee:owner
+                idp-source-id: 9eac6b53-730a-4a7f-a23e-40b84112c5cd
+                idp-source-name: bootcamp-27-prod-uc-001-oee-owner
+              - cdf-group: cdf:uc:001:oee:read
+                idp-source-id: 45e3e378-f6a3-49bb-8925-207a409b0de4
+                idp-source-name: bootcamp-27-prod-uc-001-oee-read
 
 
     namespaces:
@@ -110,12 +110,12 @@ bootstrap:
 
           # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
           ns-nodes:
-            - node-name: uc:001:oee
-              description: Overall Equipment Effectiveness (OEE) dashboard
-              shared-access:
-                read:
-                  - node-name: src:001:sap
-                  - node-name: src:002:opcua
+              - node-name: uc:001:oee
+                description: Overall Equipment Effectiveness (OEE) dashboard
+                shared-access:
+                    read:
+                        - node-name: src:001:sap
+                        - node-name: src:002:opcua
 
 
 # de-facto standards for CDF CogniteClient and logger configuration.
